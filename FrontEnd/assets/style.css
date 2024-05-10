@@ -28,6 +28,18 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+footer {
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	width: 100%
+}
+.foo-connexion {
+	bottom: 0;
+}
+html {
+	background-color: #fffef8;
+}
 body {
 	line-height: 1;
 }
@@ -94,6 +106,12 @@ nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
 }
+nav a {
+	text-decoration: none;
+}
+nav a:visited {
+	color: inherit;
+}
 
 li:hover {
 	color: #B1663C;
@@ -148,28 +166,28 @@ margin: auto;
 #contact h2{
 	margin-bottom: 20px;
 }
-#contact form {
+#contact form, .login-section form {
 	text-align: left;
 	margin-top:30px;
 	display: flex;
 	flex-direction: column;
 }
 
-#contact input {
+#contact input, .login-section input, #modale input {
 	height: 50px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-#contact label {
+#contact label, .login-section label {
 	margin: 2em 0 1em 0;
 }
-#contact textarea {
+#contact textarea, .login-section textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"]{
+input[type="submit"], #add-img-btn{
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
@@ -180,9 +198,139 @@ input[type="submit"]{
 	border-radius: 60px ;
 }
 
+.filters {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.filter {
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 16px;
+	color: #1D6154;
+	background-color: white;
+	margin : 2em 0.5em ;
+	text-align: center;
+	border-radius: 60px ;
+	padding: 1em 2em;
+	width: auto;
+	border: 1px solid #1D6154;
+	transition: all 0.3s ease-in-out
+}
+
+.filter.selected {
+	color: white;
+	background-color: #1D6154;
+}
+
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
 }
 
+/* Login */
+
+.login-title {
+	text-align: center;
+}
+
+.login-section {
+	margin: 0 auto;
+	margin-top: 160px;
+	width: 380px;
+}
+
+#modificationBtn svg {
+	height: 1.5em;
+}
+
+.portfolio-title {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.portfolio-title h2 {
+	margin-right: 0.5em;
+}
+
+#modale {
+	display: none;
+	background: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 8;
+	top: 0;
+	left: 0;
+	justify-content: center;
+	align-items: center;
+	
+}
+#modale-inner-gallery, #modale-inner-add {
+	background: #fff;
+	height: 680px;
+	width: 630px;
+	border-radius: 10px;
+	padding: 3em;
+	position: absolute;
+	z-index: 10;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#modale-inner-add {
+	display: none;
+}
+#modale-titre {
+	font-size: 1.5em;
+	height: fit-content;
+	width: 100%;
+	text-align: center;
+}
+#modale-inner-gallery #add-img-btn {
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#close-modale-btn {
+	position: absolute;
+	top: 2em;
+	right: 2em;
+}
+#close-modale-btn svg {
+	height: 24px;
+}
+.modale-gallery-container {
+	display: flex;
+	width: 80%;
+	flex-wrap: wrap;
+	margin: 3em;
+	
+}
+.modale-gallery-container figure {
+	margin: 10px 4px;
+	position: relative;
+}
+.modale-gallery-container figure img {
+	width: 82px;
+}
+.modale-gallery-container .delete-img-btn {
+	width: 16px;
+	height: 16px;
+	border-radius: 3px;
+	background-color: black;
+	position: absolute;
+	top: 6px;
+	right: 6px;
+}
