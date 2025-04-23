@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,58 +91,83 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 footer {
 	background-color: #fff;
 	position: absolute;
 	left: 0;
 	width: 100%
 }
+
 .foo-connexion {
 	bottom: 0;
 }
+
 html {
 	background-color: #fffef8;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 /** end reset css**/
 body {
 	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
+	margin: auto;
+	font-family: 'Work Sans';
 	font-size: 14px;
 }
+
 header {
 	display: flex;
 	justify-content: space-between;
 	margin: 50px 0
 }
+
 section {
 	margin: 50px 0
 }
 
-h1{
+h1 {
 	display: flex;
 	flex-direction: column;
 	font-family: 'Syne';
@@ -83,32 +176,38 @@ h1{
 	color: #B1663C
 }
 
-h1 > span {
+h1>span {
 	font-family: 'Work Sans';
-	font-size:10px;
+	font-size: 10px;
 	letter-spacing: 0.1em;
-;
+	;
 }
 
-h2{
+h2 {
 	font-family: 'Syne';
 	font-weight: 700;
 	font-size: 30px;
 	color: #1D6154
 }
+
 nav ul {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
 
 }
+
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+	cursor: pointer;
 }
+
 nav a {
 	text-decoration: none;
+	color: black;
 }
+
 nav a:visited {
 	color: inherit;
 }
@@ -116,13 +215,16 @@ nav a:visited {
 li:hover {
 	color: #B1663C;
 }
+
 #introduction {
 	display: flex;
 	align-items: center;
 }
+
 #introduction figure {
 	flex: 1
 }
+
 #introduction img {
 	display: block;
 	margin: auto;
@@ -132,6 +234,7 @@ li:hover {
 #introduction article {
 	flex: 1
 }
+
 #introduction h2 {
 	margin-bottom: 1em;
 }
@@ -139,10 +242,12 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
+
 #portfolio h2 {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
 .gallery {
 	width: 100%;
 	display: grid;
@@ -155,47 +260,71 @@ li:hover {
 	width: 100%;
 
 }
+
 #contact {
 	width: 50%;
-margin: auto;
+	margin: auto;
 }
-#contact > * {
+
+#contact>* {
 	text-align: center;
 
 }
-#contact h2{
+
+#contact h2 {
 	margin-bottom: 20px;
 }
-#contact form, .login-section form {
+
+#contact form,
+.login-section form {
 	text-align: left;
-	margin-top:30px;
+	margin-top: 10px;
 	display: flex;
 	flex-direction: column;
 }
 
-#contact input, .login-section input, #modale input {
+#contact input,
+.login-section input,
+#modale input,
+#modale select {
 	height: 50px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
-#contact label, .login-section label {
+
+#contact label,
+.login-section label {
 	margin: 2em 0 1em 0;
 }
-#contact textarea, .login-section textarea {
+
+#contact textarea,
+.login-section textarea {
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
 
-input[type="submit"], #add-img-btn{
+label {
+	font-size: 16px;
+	font-weight: bold;
+	color: #3D3D3D;
+}
+
+input[type="text"] {
+	min-height: 50px;
+}
+
+input[type="submit"],
+#add-img-btn {
 	font-family: 'Syne';
 	font-weight: 700;
 	color: white;
 	background-color: #1D6154;
-	margin : 2em auto ;
+	margin: 2em auto;
 	width: 180px;
 	text-align: center;
-	border-radius: 60px ;
+	border-radius: 60px;
+	cursor: pointer;
 }
 
 .filters {
@@ -212,13 +341,14 @@ input[type="submit"], #add-img-btn{
 	font-size: 16px;
 	color: #1D6154;
 	background-color: white;
-	margin : 2em 0.5em ;
+	margin: 2em 0.5em;
 	text-align: center;
-	border-radius: 60px ;
+	border-radius: 60px;
 	padding: 1em 2em;
 	width: auto;
 	border: 1px solid #1D6154;
-	transition: all 0.3s ease-in-out
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
 }
 
 .filter.selected {
@@ -244,6 +374,10 @@ footer nav ul {
 	width: 380px;
 }
 
+#modificationBtn {
+	cursor: pointer;
+}
+
 #modificationBtn svg {
 	height: 1.5em;
 }
@@ -253,6 +387,7 @@ footer nav ul {
 	flex-direction: row;
 	justify-content: center;
 }
+
 .portfolio-title h2 {
 	margin-right: 0.5em;
 }
@@ -268,9 +403,11 @@ footer nav ul {
 	left: 0;
 	justify-content: center;
 	align-items: center;
-	
+
 }
-#modale-inner-gallery, #modale-inner-add {
+
+#modale-inner-gallery,
+#modale-inner-add {
 	background: #fff;
 	height: 680px;
 	width: 630px;
@@ -283,15 +420,18 @@ footer nav ul {
 	flex-direction: column;
 	align-items: center;
 }
+
 #modale-inner-add {
 	display: none;
 }
+
 #modale-titre {
 	font-size: 1.5em;
 	height: fit-content;
 	width: 100%;
 	text-align: center;
 }
+
 #modale-inner-gallery #add-img-btn {
 	position: absolute;
 	bottom: 0;
@@ -302,29 +442,44 @@ footer nav ul {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 0 1em;
 }
+
 #close-modale-btn {
 	position: absolute;
 	top: 2em;
 	right: 2em;
 }
-#close-modale-btn svg {
+
+#return-modale-btn {
+	position: absolute;
+	top: 2em;
+	left: 2em;
+}
+
+#close-modale-btn svg,
+#return-modale-btn svg {
 	height: 24px;
 }
+
 .modale-gallery-container {
 	display: flex;
 	width: 80%;
+	height: 520px;
 	flex-wrap: wrap;
 	margin: 3em;
-	
+	border-bottom: 1px solid #b3b3b3;
 }
+
 .modale-gallery-container figure {
-	margin: 10px 4px;
+	margin: 10px 9px;
 	position: relative;
 }
+
 .modale-gallery-container figure img {
 	width: 82px;
 }
+
 .modale-gallery-container .delete-img-btn {
 	width: 16px;
 	height: 16px;
@@ -333,4 +488,154 @@ footer nav ul {
 	position: absolute;
 	top: 6px;
 	right: 6px;
+	cursor: pointer;
+}
+
+.modale-gallery-container .delete-img-btn:hover {
+	background-color: #464646;
+}
+
+.delete-img-btn svg {
+	fill: #fff;
+	height: 10px;
+	position: absolute;
+	top: 3px;
+	left: 4px;
+}
+
+#add-img-form {
+	display: flex;
+	flex-direction: column;
+	height: 520px;
+	width: 80%;
+	justify-content: start;
+	margin: 3em;
+	gap: 16px;
+	/* might need to change this */
+}
+
+.add-img-form-submit-container {
+	position: absolute;
+	bottom: 0;
+	width: 504px;
+}
+
+.add-img-form-separator {
+	border-bottom: 1px solid #b3b3b3;
+	width: 100%;
+}
+
+#add-img-submit {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#add-img-submit:disabled {
+	background-color: #A7A7A7;
+}
+
+#editor-banner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 4em;
+	width: 100vw;
+	background-color: #000;
+}
+
+.editor-banner-content {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#editor-banner-margin {
+	height: 4em;
+}
+
+#editor-banner svg {
+	fill: #fff;
+	height: 1em;
+	margin-right: 4px;
+}
+
+#editor-banner p {
+	color: #fff;
+}
+
+#login-error {
+	color: rgb(166, 59, 59);
+	margin-top: 2em;
+}
+
+#loginForm a {
+	color: black;
+	text-align: center;
+}
+
+#loginForm a:visited {
+	color: black;
+}
+
+#modale select {
+	background-color: #fff;
+}
+
+#add-img-form svg {
+	height: 80px;
+	fill: #B9C5CC;
+}
+
+.input-add-img#add-img-file {
+	display: none;
+}
+
+#add-img-form label.pseudo-file-input {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	cursor: pointer;
+	background: #E8F1F6;
+}
+
+#add-img-form #add-img-pseudo-input {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #CBD6DC;
+	color: #306685;
+	height: 50px;
+	width: 180px;
+	border-radius: 60px;
+	padding: 0 1em;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#add-img-input-placeholder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1em;
+	padding: 2em;
+}
+
+#add-img-form p {
+	font-size: 12px;
+	color: #444444;
+	font-weight: 500;
+}
+
+#preview-img {
+	display: none;
+	max-width: 100%;
+	height: 100%;
+	max-height: 240px;
 }

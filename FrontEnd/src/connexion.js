@@ -39,5 +39,9 @@ loginForm.addEventListener('submit', function(event) {
       .catch(error => {
         // Handle error
         console.error('There was a problem with the login request:', error);
+        let loginErrorDiv = document.getElementById('login-error');
+        let loginError = document.createElement('p');
+        loginError.innerHTML = "L'email ou le mot de passe est erroné."
+        loginErrorDiv.appendChild(loginError)
       });
 })
