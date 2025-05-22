@@ -66,7 +66,7 @@ async function fetchData() {
 
 async function appendWorks() {
   // Get the works data (from API)
-  const works = {};
+  const works = [];
   works = await fetchData();
 
   // Get the gallery element
