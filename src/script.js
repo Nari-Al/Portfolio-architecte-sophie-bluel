@@ -218,6 +218,6 @@ async function dynamicRefresh() {
   // Refill the page
   await filterVisual()
   await appendWorks()
-  await removeWork()
+  // await removeWork()
   console.log("Page refreshed")
 }
