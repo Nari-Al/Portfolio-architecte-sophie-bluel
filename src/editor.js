@@ -56,10 +56,10 @@ async function removeWork() {
                 let data = await response.json();
                 console.log('Work removed:', data);
 
-                // Refresh the page
-                await dynamicRefresh();
             } catch (error) {
                 console.error('Error removing work:', error);
+            } finally {
+                // Refresh the page
                 await dynamicRefresh();
             }
         });
