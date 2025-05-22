@@ -147,11 +147,20 @@ async function fetchCategoryData() {
 // For each unique category create a filter in filters
 
 async function createFilters() {
-  let categories = await fetchCategoryData()
-  console.log(categories)
-  let filters = document.querySelector('.filters')
-  let selectAddImg = document.querySelector('#add-img-category')
+  let categories = await fetchCategoryData();
+  let filters = document.querySelector('.filters');
+  let selectAddImg = document.querySelector('#add-img-category');
 
+  filters.innerHTML = '';
+  selectAddImg.innerHTML = '';
+
+  // Add "Tous" filter manually
+  const tousFilter = document.createElement('div');
+  tousFilter.className = "filter";
+  tousFilter.innerHTML = "Tous";
+  filters.appendChild(tousFilter);
+
+  // Loop through API categories
   categories.forEach(category => {
     // Define .filter div
     const filter = document.createElement('div');
@@ -162,11 +171,11 @@ async function createFilters() {
     filters.appendChild(filter);
 
     // Define option in modale
-    const modaleOption = document.createElement('option')
+    const modaleOption = document.createElement('option');
     modaleOption.innerHTML = category.name;
     modaleOption.value = category.id;
-    selectAddImg.appendChild(modaleOption)
-  })
+    selectAddImg.appendChild(modaleOption);
+  });
 }
 
 async function filterVisual() {
