@@ -49,7 +49,7 @@ async function removeWork() {
                 });
 
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error('Network response was not ok')
                 }
 
                 // Optionally handle the response, for example:

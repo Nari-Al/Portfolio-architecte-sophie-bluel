@@ -179,7 +179,7 @@ async function filterVisual() {
         otherFilter.classList.remove('selected');
       });
       // Add the "selected" class to the clicked filter
-      filter.classList.add('selected');
+      filter.classList.add('selected')
       // Filter the content
       let selectedFilter = filter.innerText
       let figures = document.querySelectorAll('figure')
