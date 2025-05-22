@@ -61,7 +61,7 @@ async function removeWork() {
             } catch (error) {
                 console.error('Error removing work:', error);
             }
-            // await dynamicRefresh()
+            await dynamicRefresh()
         });
     });
 }

@@ -206,18 +206,17 @@ filterVisual();
 
 
 async function dynamicRefresh() {
-  console.log('refresh attempted')
-  // // Wipe the page
-  // let filters = document.querySelector('.filters')
-  // filters.innerHTML = ''
-  // const gallery = document.querySelector('.gallery')
-  // gallery.innerHTML = ''
-  // const modaleGallery = document.querySelector('.modale-gallery-container')
-  // modaleGallery.innerHTML = ''
+  // Wipe the page
+  let filters = document.querySelector('.filters')
+  filters.innerHTML = ''
+  const gallery = document.querySelector('.gallery')
+  gallery.innerHTML = ''
+  const modaleGallery = document.querySelector('.modale-gallery-container')
+  modaleGallery.innerHTML = ''
 
-  // // Refill the page
-  // await filterVisual()
-  // await appendWorks()
-  // await removeWork()
-  // console.log("Page refreshed")
+  // Refill the page
+  await filterVisual()
+  await appendWorks()
+  await removeWork()
+  console.log("Page refreshed")
 }
