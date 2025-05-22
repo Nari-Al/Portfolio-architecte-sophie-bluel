@@ -66,6 +66,7 @@ async function fetchData() {
 
 async function appendWorks() {
   // Get the works data (from API)
+  // const works = {};
   const works = await fetchData();
 
   // Get the gallery element
@@ -146,11 +147,20 @@ async function fetchCategoryData() {
 // For each unique category create a filter in filters
 
 async function createFilters() {
-  let categories = await fetchCategoryData()
-  console.log(categories)
-  let filters = document.querySelector('.filters')
-  let selectAddImg = document.querySelector('#add-img-category')
+  let categories = await fetchCategoryData();
+  let filters = document.querySelector('.filters');
+  let selectAddImg = document.querySelector('#add-img-category');
 
+  filters.innerHTML = '';
+  selectAddImg.innerHTML = '';
+
+  // Add "Tous" filter manually
+  const tousFilter = document.createElement('div');
+  tousFilter.className = "filter";
+  tousFilter.innerHTML = "Tous";
+  filters.appendChild(tousFilter);
+
+  // Loop through API categories
   categories.forEach(category => {
     // Define .filter div
     const filter = document.createElement('div');
@@ -161,11 +171,11 @@ async function createFilters() {
     filters.appendChild(filter);
 
     // Define option in modale
-    const modaleOption = document.createElement('option')
+    const modaleOption = document.createElement('option');
     modaleOption.innerHTML = category.name;
     modaleOption.value = category.id;
-    selectAddImg.appendChild(modaleOption)
-  })
+    selectAddImg.appendChild(modaleOption);
+  });
 }
 
 async function filterVisual() {
@@ -179,7 +189,7 @@ async function filterVisual() {
         otherFilter.classList.remove('selected');
       });
       // Add the "selected" class to the clicked filter
-      filter.classList.add('selected')
+      filter.classList.add('selected');
       // Filter the content
       let selectedFilter = filter.innerText
       let figures = document.querySelectorAll('figure')
@@ -217,6 +227,6 @@ async function dynamicRefresh() {
   // Refill the page
   await filterVisual()
   await appendWorks()
-  await removeWork()
+  // await removeWork()
   console.log("Page refreshed")
 }

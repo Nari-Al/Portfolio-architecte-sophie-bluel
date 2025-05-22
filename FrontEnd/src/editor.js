@@ -49,19 +49,19 @@ async function removeWork() {
                 });
 
                 if (!response.ok) {
-                    throw new Error('Network response was not ok')
+                    throw new Error('Network response was not ok');
                 }
 
                 // Optionally handle the response, for example:
                 let data = await response.json();
                 console.log('Work removed:', data);
 
-                // Refresh the page
-                await dynamicRefresh();
             } catch (error) {
                 console.error('Error removing work:', error);
+            } finally {
+                // Refresh the page
+                await dynamicRefresh();
             }
-            await dynamicRefresh()
         });
     });
 }
