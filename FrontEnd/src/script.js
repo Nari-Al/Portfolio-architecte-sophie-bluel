@@ -206,13 +206,13 @@ filterVisual();
 
 
 async function dynamicRefresh() {
-  //Wipe the page
+  // Wipe the page
   let filters = document.querySelector('.filters')
-  filters.innerHTML.delete()
+  filters.innerHTML = ''
   const gallery = document.querySelector('.gallery')
-  gallery.innerHTML.delete()
+  gallery.innerHTML = ''
   const modaleGallery = document.querySelector('.modale-gallery-container')
-  modaleGallery.innerHTML.delete()
+  modaleGallery.innerHTML = ''
 
   // Refill the page
   await filterVisual()

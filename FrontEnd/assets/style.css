@@ -465,10 +465,8 @@ footer nav ul {
 .modale-gallery-container {
 	display: flex;
 	width: 80%;
-	height: 520px;
 	flex-wrap: wrap;
 	margin: 3em;
-	border-bottom: 1px solid #b3b3b3;
 }
 
 .modale-gallery-container figure {
@@ -638,4 +636,12 @@ footer nav ul {
 	max-width: 100%;
 	height: 100%;
 	max-height: 240px;
+}
+
+.modale-gallery-separator {
+	height: 1px;
+	width: 504px;
+	position: absolute;
+	bottom: 120px;
+	border-bottom: solid 1px #b3B3b3;
 }

@@ -5,7 +5,7 @@ document.getElementById('add-img-form').addEventListener('submit', function (eve
     const formData = new FormData(this);
     let token = localStorage.getItem('token')
 
-    // Send POST request to your backend API endpoint
+    // Send POST request to the backend API endpoint
     fetch('http://localhost:5678/api/works', {
         headers: { 'Authorization': `Bearer ${token}` },
         method: 'POST',
@@ -32,7 +32,6 @@ document.getElementById('add-img-form').addEventListener('submit', function (eve
 
 async function removeWork() {
     let deleteImgBtns = document.querySelectorAll('.delete-img-btn');
-    console.log(deleteImgBtns);
 
     deleteImgBtns.forEach(deleteImgBtn => {
         console.log(deleteImgBtn);
